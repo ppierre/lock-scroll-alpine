@@ -35,3 +35,5 @@ npm run build
 Juste donner le dépot à Netlify
 
 Visible à [https://willowy-arithmetic-e7c2bb.netlify.app/index.html]
+
+Et [rapport lighthouse généré dans un sous dossier (/reports/lighthouse.html)](https://willowy-arithmetic-e7c2bb.netlify.app/reports/lighthouse.html)
