@@ -24,8 +24,14 @@ Version de production :
 npx parcel build src/index.html
 ```
 
-ou
+Ou
 
 ```
 npm run build
 ```
+
+# Publication...
+
+Juste donner le dépot à Netlify
+
+Visible à [https://willowy-arithmetic-e7c2bb.netlify.app/index.html]
