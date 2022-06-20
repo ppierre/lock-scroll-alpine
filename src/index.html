@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test parcel</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body
+    x-data="{ menuOpen: false }"
+    x-init="$watch('menuOpen', ()=>{
+    if (menuOpen) {
+      scrollLock.disablePageScroll()
+    } else {
+      scrollLock.enablePageScroll();
+    }
+  })"
+    class="font-advent"
+  >
+    <h1 class="text-4xl">Test de page avec parcel</h1>
+    <button @pointerdown="menuOpen = !menuOpen">Menu</button>
+    <template x-if="menuOpen">
+      <nav>
+        <ul>
+          <li><a href="sous-dossier/autre.html">Lien vers autre</a></li>
+          <li><a href="#">menu 2</a></li>
+          <li><a href="#">menu 3</a></li>
+        </ul>
+      </nav>
+    </template>
+
+    <script src="npm:scroll-lock"></script>
+    <script type="module">
+      import Alpine from "alpinejs";
+      import "@fontsource/advent-pro";
+      window.Alpine = Alpine;
+      Alpine.start();
+    </script>
+  </body>
+</html>
