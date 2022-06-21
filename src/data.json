@@ -1,0 +1,5 @@
+[
+  { "titre": "un titre", "lien": "/" },
+  { "titre": "Google", "lien": "https://google.fr" },
+  { "titre": "Light house", "lien": "/reports/lighthouse.html" }
+]

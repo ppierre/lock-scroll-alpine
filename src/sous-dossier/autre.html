@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test autre parcel</title>
-    <script type="module" src="/src/app.ts"></script>
+    <!-- <script type="module" src="/src/app.ts"></script> -->
   </head>
   <body class="font-advent">
     <h1 class="text-4xl">Test d'autre page avec parcel</h1>
-    <button x-data @pointerdown="menuOpen = !menuOpen">Menu</button>
-    <template x-if="menuOpen">
+    <button x-data @pointerdown="$store.menu.visible = !$store.menu.visible">
+      Menu
+    </button>
+    <template x-data x-if="$store.menu.visible">
       <nav>
         <ul>
           <li><a href="../index.html">retour Accueil</a></li>
@@ -19,5 +21,26 @@
         </ul>
       </nav>
     </template>
+
+    <!-- l'import du store est "inline" en bas... -->
+    <ul x-data>
+      <template x-for="{titre, lien} in $store.listeJson">
+        <li><a :href="lien" x-text="titre" /></li>
+      </template>
+    </ul>
+
+    <!-- https://github.com/alpine-collective/alpinejs-devtools/issues/176#issuecomment-1087631411 -->
+    <input
+      type="hidden"
+      x-title="_devtools_stores"
+      x-effect="new_store = { ...$store }; delete new_store._devtools_stores; $store._devtools_stores = new_store"
+      x-data="{new_store: null}"
+    />
+    <!-- En bas de body pour éviter de devoir faire un fichier externe -->
+    <script type="module" lang="ts">
+      import "/src/app.ts"; //on importe ici app.ts pour établir la dépendance entre les deux
+      import data from "/src/data.json";
+      Alpine.store("listeJson", data);
+    </script>
   </body>
 </html>
