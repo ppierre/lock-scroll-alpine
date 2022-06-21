@@ -21,7 +21,7 @@
           }
         },
         classCourant(element) {
-          return {'text-red-600':element.href.endsWith('#'+this.idCourant)};
+          return {'text-red-600':element.getAttribute('href') === ('#'+this.idCourant)};
         }
     }"
     >
