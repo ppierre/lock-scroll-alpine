@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test parcel</title>
-    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="./app.ts"></script>
   </head>
   <body
     x-data="{ menuOpen: false }"
     x-init="$watch('menuOpen', ()=>{
     if (menuOpen) {
-      scrollLock.disablePageScroll()
+      disablePageScroll()
     } else {
-      scrollLock.enablePageScroll();
+      enablePageScroll();
     }
   })"
     class="font-advent"

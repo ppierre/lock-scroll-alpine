@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test autre parcel</title>
-    <link rel="stylesheet" href="../index.css" />
+    <script type="module" src="../app.ts"></script>
   </head>
   <body
     x-data="{ menuOpen: false }"
     x-init="$watch('menuOpen', ()=>{
     if (menuOpen) {
-      scrollLock.disablePageScroll()
+      disablePageScroll()
     } else {
-      scrollLock.enablePageScroll();
+      enablePageScroll();
     }
   })"
     class="font-advent"
@@ -29,13 +29,5 @@
         </ul>
       </nav>
     </template>
-
-    <script src="npm:scroll-lock"></script>
-    <script type="module">
-      import Alpine from "alpinejs";
-      import "@fontsource/advent-pro";
-      window.Alpine = Alpine;
-      Alpine.start();
-    </script>
   </body>
 </html>
