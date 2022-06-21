@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test parcel</title>
-    <script type="module" src="./app.ts"></script>
+    <script type="module" src="/src/app.ts"></script>
   </head>
-  <body
+  <!-- Remplacé par un "Alpine.store(...)" dans "app.ts" -->
+  <!--   <body
     x-data="{ menuOpen: false }"
     x-init="$watch('menuOpen', ()=>{
     if (menuOpen) {
@@ -17,7 +18,8 @@
     }
   })"
     class="font-advent"
-  >
+  > -->
+  <body class="font-advent">
     <!-- svg avec description incluse dans son symbole (aka. accessible) -->
     <button
       @pointerdown="console.log('est pas accessible malgré la desc dans le symbole')"
@@ -39,8 +41,10 @@
       <!-- Manque un text en "sr-only" -->
       <!-- <p class="sr-only">text bouton</p> --></button
     ><br />
-    <button @pointerdown="menuOpen = !menuOpen">Menu</button>
-    <template x-if="menuOpen">
+    <button x-data @pointerdown="$store.menu.visible = !$store.menu.visible">
+      Menu
+    </button>
+    <template x-data x-if="$store.menu.visible">
       <nav>
         <ul>
           <li><a href="sous-dossier/autre.html">sous dossier</a></li>
