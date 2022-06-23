@@ -8,7 +8,7 @@
     <script type="module" src="/src/app.ts"></script>
   </head>
   <!-- Remplacé par un "Alpine.store(...)" dans "app.ts" -->
-  <!--   <body
+    <body
     x-data="{ menuOpen: false }"
     x-init="$watch('menuOpen', ()=>{
     if (menuOpen) {
@@ -18,8 +18,8 @@
     }
   })"
     class="font-advent"
-  > -->
-  <body class="font-advent">
+  >
+  <!-- <body class="font-advent"> -->
     <!-- svg avec description incluse dans son symbole (aka. accessible) -->
     <button
       @pointerdown="console.log('est pas accessible malgré la desc dans le symbole')"
@@ -41,12 +41,12 @@
       <!-- Manque un text en "sr-only" -->
       <!-- <p class="sr-only">text bouton</p> --></button
     ><br />
-    <button x-data @pointerdown="$store.menu.visible = !$store.menu.visible">
+    <button x-data @pointerdown="menuOpen = !menuOpen">
       Menu
     </button>
     <nav
       x-data
-      x-show="$store.menu.visible"
+      x-show="menuOpen"
       x-transition:enter="transition ease-out duration-[3s]"
       x-transition:enter-start="translate-x-full"
       x-transition:enter-end="translate-x-0"
