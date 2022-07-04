@@ -7,12 +7,12 @@
 
   [[plugins.inputs.audits]]
     output_path = "reports/slider.html"
-    path = "/slider.html"
+    path = "slider.html"
 
   [[plugins.inputs.audits]]
     output_path="reports/index.html"
-    path = "/index.html"
+    path = "index.html"
 
   [[plugins.inputs.audits]]
     output_path = "reports/sous-dossier/autre.html"
-    path = "/sous-dossier/autre.html"
+    path = "sous-dossier/autre.html"
