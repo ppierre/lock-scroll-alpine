@@ -8,10 +8,22 @@
   </head>
   <body>
     <ul>
-      <li><a href="/reports/accueil.html">index.html</a></li>
-      <li><a href="/reports/slider.html">slider.html</a></li>
       <li>
-        <a href="/reports/sous-dossier/autre.html">/sous-dossier/autre.html</a>
+        <script>
+          document.write(`<a href="/reports/accueil.html">index.html</a>`);
+        </script>
+      </li>
+      <li>
+        <script>
+          document.write(`<a href="/reports/slider.html">slider.html</a>`);
+        </script>
+      </li>
+      <li>
+        <script>
+          document.write(
+            `<a href="/reports/sous-dossier/autre.html">/sous-dossier/autre.html</a>`
+          );
+        </script>
       </li>
     </ul>
   </body>
