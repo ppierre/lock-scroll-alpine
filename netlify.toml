@@ -2,11 +2,8 @@
 [[plugins]]
  package = "@netlify/plugin-lighthouse"
  
-
- 
-
   [[plugins.inputs.audits]]
-    output_path="reports/index.html"
+    output_path="reports/accueil.html"
     path = ""
 
   [[plugins.inputs.audits]]
