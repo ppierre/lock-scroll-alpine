@@ -4,11 +4,11 @@
  
   [[plugins.inputs.audits]]
     output_path="reports/accueil.html"
-    path = ""
+    path = "" #la racine du site
 
   [[plugins.inputs.audits]]
     output_path = "reports/slider.html"
-    path = "slider.html"
+    path = "slider.html" #le chemin du fichier à tester
     
   [[plugins.inputs.audits]]
     output_path = "reports/sous-dossier/autre.html"
