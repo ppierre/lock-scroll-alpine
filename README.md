@@ -36,7 +36,9 @@ Juste donner le dépot à Netlify
 
 Visible à [https://willowy-arithmetic-e7c2bb.netlify.app/index.html]
 
-Et [rapport lighthouse généré dans un sous dossier (/reports/index.html)](https://willowy-arithmetic-e7c2bb.netlify.app/reports/index.html)
+[Liens vers pages avec tout les liens vers les rapports Lighthouse](https://willowy-arithmetic-e7c2bb.netlify.app/reports)
+
+Et [rapport lighthouse généré dans un sous dossier (/reports/accueil.html)](https://willowy-arithmetic-e7c2bb.netlify.app/reports/accueil.html)
 
 Et [possible d'en faire plusieurs (ici .../slider.html)](https://willowy-arithmetic-e7c2bb.netlify.app/reports/slider.html)
 
